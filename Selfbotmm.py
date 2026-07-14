@@ -840,7 +840,7 @@ async def handle_group_message(update: Update, context: ContextTypes.DEFAULT_TYP
     text = update.message.text.strip()
     
     # ─── VOUCH DETECTION ─────────────────────────────────────────────────
-    vouch_pattern = re.compile(r'vouch\s+@(\w+)\s+mmd', re.IGNORECASE)
+    vouch_pattern = re.compile(r'I+vouch\s+@(\w+)\s+mmd', re.IGNORECASE)
     match = vouch_pattern.search(text)
     if match:
         vouch_username = match.group(1)
